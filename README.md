@@ -17,7 +17,7 @@ $ sqd process
 You should see a `./data` folder populated with indexer data appear in a bit:
 ```bash
 $ tree ./data/
-data/
+./data/
 ├── 0000000000-0007242369
 │   └── transfers.tsv
 ├── 0007242370-0007638609
