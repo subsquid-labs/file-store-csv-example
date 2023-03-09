@@ -2,7 +2,7 @@
 
 This tiny blockchain indexer scrapes `Transfer` events emitted by the [USDC contract](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) and saves the data in a file-based dataset in a local folder `./data`. It is built with the [Subsquid framework](https://subsquid.io), hence the term "squid".
 
-The squid uses `@subsquid/file-store` and `@subsquid/file-store-csv` packages to generate the dataset. A less common tab separated values (TSV) format was chosen to highlight the flexibility of the file writing subsystem.
+The squid uses `@subsquid/file-store` and `@subsquid/file-store-csv` packages to store the dataset. A less common _tab separated values_ (TSV) format was chosen to highlight the flexibility of the file writing subsystem.
 
 Dependencies: NodeJS, [Squid CLI](https://docs.subsquid.io/squid-cli).
 
@@ -14,7 +14,7 @@ $ cd file-store-csv-example/
 $ npm i
 $ sqd process
 ```
-You should see the `./data` folder populated with the indexer data appear in a bit:
+You should see a `./data` folder populated with indexer data appear in a bit:
 ```bash
 $ tree ./data/
 data/
