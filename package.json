@@ -1,5 +1,5 @@
 {
-  "name": "aave-v2-liquidations-file-store",
+  "name": "file-store-csv-example",
   "private": true,
   "scripts": {},
   "dependencies": {

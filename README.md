@@ -1,10 +1,10 @@
-# A squid that saves USDC Transfers to a TSV file
+# A squid that saves USDC Transfers to TSV files
 
 This tiny blockchain indexer scrapes `Transfer` events emitted by the [USDC contract](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) and saves the data in a file-based dataset in a local folder `./data`. It is built with the [Subsquid framework](https://subsquid.io), hence the term "squid".
 
 The squid uses `@subsquid/file-store` and `@subsquid/file-store-csv` packages to generate the dataset. A less common tab separated values (TSV) format was chosen to highlight the flexibility of the file writing subsystem.
 
-Dependencies: NodeJS.
+Dependencies: NodeJS, [Squid CLI](https://docs.subsquid.io/squid-cli).
 
 To see it in action, spin up a *processor*, a process that ingests the data from the Ethereum Archive:
 
@@ -14,4 +14,14 @@ $ cd file-store-csv-example/
 $ npm i
 $ sqd process
 ```
-You should see the `./data` folder populated with the indexer data appear in a bit.
+You should see the `./data` folder populated with the indexer data appear in a bit:
+```bash
+$ tree ./data/
+data/
+├── 0000000000-0007242369
+│   └── transfers.tsv
+├── 0007242370-0007638609
+│   └── transfers.tsv
+...
+└── status.txt
+```
