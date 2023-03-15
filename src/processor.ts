@@ -23,7 +23,7 @@ const dbOptions = {
 			{
 				from: Column(Types.String()),
 				to: Column(Types.String()),
-				value: Column(Types.Integer())
+				value: Column(Types.Numeric())
 			},
 			{
 				extension: 'tsv',
