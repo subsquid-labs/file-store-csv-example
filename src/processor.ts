@@ -15,8 +15,3 @@ export const processor = new EvmBatchProcessor()
 		address: [USDC_CONTRACT],
 		topic0: [erc20abi.events.Transfer.topic]
 	})
-	.setFields({
-		log: {
-			transactionHash: true
-		}
-	})
